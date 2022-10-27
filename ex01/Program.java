@@ -5,7 +5,7 @@ public class Program {
         Scanner input = new Scanner(System.in);
         int num;
         num = input.nextInt();
-        if (!is_arg_ok(num)){
+        if (num < 2){
             System.err.println("Illegal Argument");
             return;
         }
@@ -29,15 +29,7 @@ public class Program {
         System.out.println(is_primal + " " + count );
 
     }
-    private static boolean is_arg_ok(int num){
-        if (num <= 0){
-            return false;
-        }
-        if (num == 1){
-            return false;
-        }
-        return true;
-    }
+
 }
 
 
